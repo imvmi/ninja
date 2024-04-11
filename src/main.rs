@@ -99,7 +99,8 @@ impl std::fmt::Debug for AgentImpersonate {
             Impersonate::Chrome118 => "chrome118",
             Impersonate::Chrome119 => "chrome119",
             Impersonate::Chrome120 => "chrome120",
-            Impersonate::Safari12 => "safari12",
+            Impersonate::Chrome123 => "safari123",
+            Impersonate::SafariIos17_2 => "safari17_2",
             Impersonate::Safari15_3 => "safari15_3",
             Impersonate::Safari15_5 => "safari15_5",
             Impersonate::Safari15_6_1 => "safari15_6_1",
@@ -115,6 +116,7 @@ impl std::fmt::Debug for AgentImpersonate {
             Impersonate::OkHttp5 => "okhttp5",
             Impersonate::Edge99 => "edge99",
             Impersonate::Edge101 => "edge101",
+            Impersonate::Edge122 => "edge122",
         };
         f.write_str(name)
     }
@@ -134,7 +136,7 @@ fn print_ua_help() {
 
     // Safari user agent group
     let safari_group = [
-        AgentImpersonate(Impersonate::Safari12),
+        AgentImpersonate(Impersonate::SafariIos17_2),
         AgentImpersonate(Impersonate::Safari15_3),
         AgentImpersonate(Impersonate::Safari15_5),
         AgentImpersonate(Impersonate::Safari15_6_1),
